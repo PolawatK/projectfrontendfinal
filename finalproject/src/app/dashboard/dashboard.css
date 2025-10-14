@@ -1,0 +1,59 @@
+.Report{
+    width: 100%;
+}
+.report-box{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 50px 100px 50px 100px;
+}
+.static-box{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(188, 188, 188, 0.589);
+    width: 250px;
+    height: 130px;
+    display: flex;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.static-box-data{
+    padding: 20px;
+}
+.static-box-data p{
+    color: rgb(125, 125, 125);
+}
+.static-box-data h2{
+    font-weight: 500;
+}
+.static-box hr{
+    border: 1px solid rgba(188, 188, 188, 0.477);
+    margin-top: 5px;
+    width: 170px;
+}
+.static-box-data .percent{
+    margin-top: 10px;
+    font-size: 15px;
+    color: rgb(125, 125, 125);
+}
+.static-box-data .percent strong{
+    color: rgb(79, 182, 0);
+}
+.icon-box {
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.212);
+    background-color: rgb(40, 40, 40);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 10px;
+    margin-left: -10px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.icon-box i{
+    color: #fff;
+}
+.static-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 1px 1px 50px 1px rgba(0, 0, 0, 0.411);
+}
