@@ -16,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'InsertEmployee',
     loadChildren: () => import('./insertemployee/insertemployee.routes').then(m => m.INSERTEMPLOYEE_ROUTES)
+  },
+  {
+    path: 'Salary',
+    loadChildren: () => import('./salary/salary.routes').then(m => m.SALARY_ROUTES)
   }
 ];
