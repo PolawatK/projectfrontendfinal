@@ -99,3 +99,8 @@ li.active i {
 li.active span {
   color: #fff !important;
 }
+.graph{
+    width: 100vh;
+    background-color: beige;
+    
+}

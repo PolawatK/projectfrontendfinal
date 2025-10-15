@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterLink} from '@angular/router';
 import { OnInit } from '@angular/core';
+import { LineChart } from "../line-chart/line-chart";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterLink],
+  imports: [RouterLink, LineChart],
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css'
 })
@@ -20,4 +21,3 @@ export class Dashboard implements OnInit {
     }
   }
 }
-
