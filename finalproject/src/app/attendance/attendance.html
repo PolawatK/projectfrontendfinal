@@ -1,0 +1,11 @@
+<h2>Check Attendance</h2>
+<div *ngFor="let emp of empList">
+  <span>{{ emp.name }}</span>
+  <select [(ngModel)]="attendance[emp.id]">
+    <option value="Present">Present</option>
+    <option value="Leave">Leave</option>
+    <option value="Absent">Absent</option>
+  </select>
+</div>
+
+<button (click)="saveAttendance()">Save</button>
