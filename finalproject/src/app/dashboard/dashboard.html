@@ -24,8 +24,8 @@
           <div class="report-box">
               <div class="static-box">
                   <div class="static-box-data">
-                  <p>Test</p>
-                  <h2>$234,240</h2>
+                  <p>Total Employee</p>
+                  <h2>{{totalEmployees()}}</h2>
                   <hr>
                   <p class="percent"> <strong>+55%</strong> than last weak</p>
                   </div>
@@ -35,11 +35,11 @@
               </div>
               <div class="static-box">
                   <div class="static-box-data">
-                  <p>Test</p>
-                  <h2>$234,240</h2>
+                  <p>Recent Salary pay</p>
+                  <h2>{{totalSalary() | currency:'THB':'symbol':'1.0-0'}}</h2>
                   <hr>
                   <p class="percent"> <strong>+55%</strong> than last weak</p>
-                  </div>
+                  </div> 
                   <div class="icon-box">
                       <i class="fa-solid fa-address-book"></i>
                   </div>
