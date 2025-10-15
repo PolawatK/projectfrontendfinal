@@ -6,7 +6,6 @@
     justify-content: space-between;
     display: flex;
     padding: 50px 100px 50px 100px;
-    background-color: aquamarine;
 }
 .static-box{
     background-color: rgb(255, 255, 255);
@@ -57,4 +56,46 @@
 .static-box:hover{
     transform: translateY(-10px);
     box-shadow: 1px 1px 50px 1px rgba(0, 0, 0, 0.411);
+}
+.body{
+    display: flex;
+}
+nav ul{
+    list-style: none;
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+}
+nav ul li a i{
+    margin-right: 5px;
+    color: black;
+}
+.head-nav{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(188, 188, 188, 0.589);
+    padding: 20px;
+    width: 300px;
+    height: 100vh;
+}
+.data{
+    background-color: #dedcdcc3;
+    padding: 30px;
+    width: 100%;
+}
+li.active{
+    background-color: black;
+    
+}
+li.active i {
+  color: #fff !important;
+}
+li.active span {
+  color: #fff !important;
 }
