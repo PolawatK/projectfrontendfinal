@@ -34,7 +34,17 @@ addNewEmployee(){
     empList.push(emp);
     localStorage.setItem('empdata', JSON.stringify(empList));
 
+    this.addActivity(`Added employee “${emp.name}”`, 'Add');
     alert('เพิ่มข้อมูลสำเร็จ!');
     this.router.navigate(['/employee']);
 }
+  addActivity(message: string, type: string) {
+    const logs = JSON.parse(localStorage.getItem('activityLogs') || '[]');
+    logs.unshift({
+      message,
+      type,
+      time: new Date().toISOString()
+    });
+    localStorage.setItem('activityLogs', JSON.stringify(logs));
+  }
 }

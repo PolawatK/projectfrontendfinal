@@ -1,11 +1,32 @@
-<h2>Check Attendance</h2>
-<div *ngFor="let emp of empList">
-  <span>{{ emp.name }}</span>
-  <select [(ngModel)]="attendance[emp.id]">
-    <option value="Present">Present</option>
-    <option value="Leave">Leave</option>
-    <option value="Absent">Absent</option>
-  </select>
-</div>
+<div class="attendance-container">
+  <h2>📅 Attendance for {{ today }}</h2>
+  <p>เลือกสถานะของพนักงานแต่ละคน แล้วกดบันทึก</p>
 
-<button (click)="saveAttendance()">Save</button>
+  <table class="attendance-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empList()">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.position }}</td>
+        <td>
+          <select [(ngModel)]="attendance[emp.id]">
+            <option value="" disabled selected>เลือกสถานะ</option>
+            <option value="Present">Present</option>
+            <option value="Leave">Leave</option>
+            <option value="Absent">Absent</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="save-btn" (click)="saveAttendance()">💾 บันทึก</button>
+</div>

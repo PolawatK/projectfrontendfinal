@@ -67,6 +67,21 @@
         <app-line-chart></app-line-chart>
       </div>
   </div>
-
+<div class="activity-section">
+  <h3>Recent Activity</h3>
+  <ul class="activity-list">
+    <li *ngFor="let log of activityLogs()">
+      <div class="activity-icon" [ngClass]="{
+        'add': log.type === 'Add',
+        'work': log.type === 'Work' || log.type === 'Present',
+        'leave': log.type === 'Leave'
+      }"></div>
+      <div class="activity-content">
+        <p>{{ log.message }}</p>
+        <small>Today {{ formatTime(log.time) }}</small>
+      </div>
+    </li>
+  </ul>
+</div>
 
 </div>
