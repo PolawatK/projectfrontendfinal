@@ -58,39 +58,3 @@
     transform: translateY(-10px);
     box-shadow: 1px 1px 50px 1px rgba(0, 0, 0, 0.411);
 }
-
-
-.lower_report{
-    margin-top: 50px;
-}  
-.Product{
-    
-    width: 99vh;
-}
-.Product ,th,td{
-    padding: 20px;
-}
-.head_table{
-    
-    border: 2px black solid;
-    
-}
-.head_table a{
-    display: flex;
-    justify-content: right;
-    text-decoration: none;
-}
-.head_table button{
-    padding: 10px;
-}
-table{
-   border: 2px black solid;
-   border-radius: 10px;
-   border-collapse: separate;
-   background-color: aqua;
-   
-}
-th{
-    text-align: left;
-}
-
