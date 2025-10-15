@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule],
   templateUrl: './login.html',
   styleUrl: './login.css'
 })
@@ -59,6 +59,7 @@ export class Login implements OnInit {
     const isUserExist = this.signupUsers.find(m => m.email == this.loginObj.email && m.password == this.loginObj.password);
     if(isUserExist != undefined) {
       alert('Login Successful');
+      localStorage.setItem('loggedInUser', JSON.stringify(isUserExist));  
       this.router.navigate(['/Dashboard']);
     } else {
       alert('Invalid Credentials');
