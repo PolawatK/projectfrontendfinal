@@ -1,2 +1,62 @@
-<p>login works!</p>
-<a routerLink="/Dashboard"><button>Dashboard</button></a>
+ <div class="container-bd" [class.active]="isActive">
+        <div class="head-container">
+            <div class="Container-login">
+                <div class="leftside">
+                    <div class="toggle-left-box">
+                        <h1>Welcome To Analysis</h1>
+                        <p>Don’t have an account yet? <br> Click here to sign up!</p>
+                        <button class="regis-btn" (click)="toggleRegister()" >Register</button>
+                        <img src="Dashboard.png">
+                    </div>
+                    <div class="toggle-right-box">
+                        <h1>Register Now!</h1>
+                        <p>Already have an account? <br> Click here to sign in!</p>
+                        <button class="user-btn" (click)="toggleUser()">Login</button>
+                        <img src="Dashboard.png">
+                    </div>
+                </div>
+                <div class="rightside">
+                    <div class="login-user">
+                        <form action="login-success.php" method="post">
+                            <h1>Sign in</h1>
+                            <div class="input-box">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" required placeholder="Email" name="cus_email">
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" required placeholder="Password" name="cus_password">
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox">
+                                <p>จดจำรหัสผ่าน</p>
+                            </div>
+                            <button type="submit" class="sub-btn" name="sub-user-btn">Sign in</button>
+                        </form>
+                    </div>
+                    <div class="regis-box">
+                        <form action="" method="post">
+                            <h1>Register</h1>
+                            <div class="input-box">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" required placeholder="Username" >
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" required placeholder="Email" >
+                            </div>
+                            <div class="input-box">
+                                <i class="fa-solid fa-lock"></i>
+                                <input type="password" required placeholder="Password" >
+                            </div>
+                            <div class="check-box">
+                                <input type="checkbox">
+                                <p>agree terms</p>
+                            </div>
+                            <button type="submit" class="sub-btn" name="sub-btn-admin">Register</button>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
