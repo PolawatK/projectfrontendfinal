@@ -52,6 +52,7 @@ export class Login implements OnInit {
     };
 
     alert('Register Successful');
+    window.location.reload();
   }
 
   onLogin() {
