@@ -19,24 +19,32 @@
   </div>
   <div class="data">
     <div class="data-table">
-        <h2>Recent Employee </h2>
+        <h2>Recent Employee <span><a href="/InsertEmployee"><button>Add Employee<i class="fa-solid fa-plus"></i></button></a></span></h2>
         <table>
-        <tr>
-            <th>id</th>
-            <th>Name</th>
-            <th>Join Date</th>
-            <th>Position</th>
-            <th>Salary</th>
-        </tr>
-        @for (emp of empdata; track emp.id){
-        <tr>
-            <td>Emp001</td>
-            <td>Polawat</td>
-            <td>19/99/2005</td>
-            <td>Full stack</td>
-            <td>$25000</td>
-        </tr>
-        }
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Name</th>
+                    <th>Join Date</th>
+                    <th>Position</th>
+                    <th>Salary</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @for (emp of empdata; track emp.id){    
+                <tr app-employeedata 
+                    [id]="emp.id" 
+                    [name]="emp.name" 
+                    [joindate]="emp.joindate" 
+                    [position]="emp.position" 
+                    [salary]="emp.salary"
+                    (onDelete)="removeDataById($event)"
+                    >
+                </tr>
+
+            } 
+            </tbody>
     </table>
     </div>
   </div>
