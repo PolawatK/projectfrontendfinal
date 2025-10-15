@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
   styleUrl: './login.css'
 })
 export class Login {
-
+  isActive = false;
+  toggleRegister(){
+    this.isActive = true;
+  }
   toggleUser() {
     this.isActive = false;
   }
