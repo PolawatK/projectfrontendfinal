@@ -40,3 +40,36 @@ li.active i {
 li.active span {
   color: #fff !important;
 }
+table{
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+table th,tr,td{
+    padding: 10px;
+    transition: 0.2s;
+}
+table tr{   
+    border: 2px solid rgba(201, 201, 201, 0.393);
+    border-collapse: collapse;
+    transition: 0.2s;
+}
+table tr:hover {
+    color: #fff;
+    background-color: rgb(47, 47, 47) !important; 
+}
+table tr:hover td{
+    transform: translateY(-2px);
+}
+.data-table h2{
+    padding-bottom: 20px;
+}
+.data-table{
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid rgba(188, 188, 188, 0.589);
+}
+table tr:nth-child(even) {
+  background-color: #dedede63;
+}
