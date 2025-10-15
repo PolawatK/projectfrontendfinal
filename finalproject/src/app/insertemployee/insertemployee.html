@@ -1,0 +1,28 @@
+<h2>เเบบฟอร์มกรอกข้อมูลพนักงาน</h2>
+<div class="container">
+<form (ngSubmit)="addNewEmployee()">
+    <div class="form-box">
+        <p>Firstname - Lastname</p>
+        <input type="text" [value]="fullname()" 
+        (input)="fullname.set($any($event.target).value)" 
+        placeholder="ชื่อ-นามสกุล" >
+    </div>
+    <div class="form-box">
+        <p>Joindate</p>
+        <input type="date" name="date"  [value]="joindate()" 
+        (input)="joindate.set($any($event.target).value)">
+    </div>
+    <div class="form-box">
+        <p>Position</p>
+        <input type="text" name="position" [value]="position()" 
+        (input)="position.set($any($event.target).value)">
+    </div>
+    <div class="form-box">
+        <p>Salary</p>
+        <label for="เงินเดือน"></label>
+        <input type="number" name="salary" step="5000"  [value]="salary()" 
+        (input)="salary.set($any($event.target).value)">
+    </div>
+    <button type="submit" [disabled]="fullname().trim()==''">บันทึก</button>
+</form>
+</div>

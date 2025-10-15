@@ -1,0 +1,7 @@
+<td>{{ id() }}</td>
+<td>{{ name() }}</td>
+<td>{{ joindate() | date:'dd/MM/yyyy' }}</td>
+<td>{{ position() }}</td>
+<td>{{ salary() | currency:'THB':'symbol':'1.0-0' }}</td>
+<td><button (click)="deleteItem()"><i class="fa-solid fa-xmark"></i></button></td>
+

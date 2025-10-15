@@ -54,7 +54,7 @@ table tr{
     border-collapse: collapse;
     transition: 0.2s;
 }
-table tr:hover {
+tbody tr:hover {
     color: #fff;
     background-color: rgb(47, 47, 47) !important; 
 }
@@ -72,4 +72,23 @@ table tr:hover td{
 }
 table tr:nth-child(even) {
   background-color: #dedede63;
+}
+.data-table button{
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid rgb(151, 151, 151);
+    background-color: rgb(92, 161, 1);
+    color: #fff;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.data-table button:hover{
+    background-color: transparent;
+    color: black;
+}
+.data-table button i{
+    transition: 0.3s;
+}
+.data-table button:hover i{
+    transform: rotateZ(90deg);
 }

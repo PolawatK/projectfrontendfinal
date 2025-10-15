@@ -12,5 +12,9 @@ export const routes: Routes = [
   {
     path: 'Dashboard',
     loadChildren: () => import('./dashboard/dashboard.routes').then(m => m.DASHBOARD_ROUTES)
+  },
+  {
+    path: 'InsertEmployee',
+    loadChildren: () => import('./insertemployee/insertemployee.routes').then(m => m.INSERTEMPLOYEE_ROUTES)
   }
 ];
