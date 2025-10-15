@@ -62,7 +62,7 @@ export class Login implements OnInit {
       localStorage.setItem('loggedInUser', JSON.stringify(isUserExist));  
       this.router.navigate(['/Dashboard']);
     } else {
-      alert('Invalid Credentials');
+      alert('Password or Email incorrect');
     }
   }
 }
