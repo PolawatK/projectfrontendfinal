@@ -1,32 +1,68 @@
-<div class="attendance-container">
-  <h2>📅 Attendance for {{ today }}</h2>
-  <p>เลือกสถานะของพนักงานแต่ละคน แล้วกดบันทึก</p>
+<div class="body">
+  <div class="head-nav">
+    <nav>
+        <img src="logo.png" alt="">
+      <ul>
+        <li>
+            <a routerLink="/Dashboard">
+              <i class="fa-solid fa-cubes"></i>
+              <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/Employee">
+              <i class="fa-solid fa-users-gear"></i>
+              <span>Employee</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/InsertEmployee">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Add Employee</span>
+            </a>
+        </li>
+        <li class="active">
+            <a routerLink="/Attendance">
+              <i class="fa-solid fa-clipboard-user"></i>
+              <span>Attendance</span>
+            </a>
+        </li>
+      </ul>
+      <a href=""><button class="logout-btn">logout</button></a>
+    </nav>   
+  </div>
+  <div class="data">
+    <div class="attendance-bd">
+      <h2>Check in {{ today }}</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let emp of empList()">
+              <td>{{ emp.id }}</td>
+              <td>{{ emp.name }}</td>
+              <td>{{ emp.position }}</td>
+              <td>
+                <select [(ngModel)]="attendance[emp.id]">
+                  <option value="" disabled selected>Select Status</option>
+                  <option value="Present">Present</option>
+                  <option value="Leave">Leave</option>
+                  <option value="Absent">Absent</option>
+                </select>
+              </td>
+            </tr>
+          </tbody>
+      </table>
 
-  <table class="attendance-table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Position</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let emp of empList()">
-        <td>{{ emp.id }}</td>
-        <td>{{ emp.name }}</td>
-        <td>{{ emp.position }}</td>
-        <td>
-          <select [(ngModel)]="attendance[emp.id]">
-            <option value="" disabled selected>เลือกสถานะ</option>
-            <option value="Present">Present</option>
-            <option value="Leave">Leave</option>
-            <option value="Absent">Absent</option>
-          </select>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+      <button class="save-btn" (click)="saveAttendance()">Submit</button>
+    </div>
+      
+  </div>
 
-  <button class="save-btn" (click)="saveAttendance()">💾 บันทึก</button>
 </div>

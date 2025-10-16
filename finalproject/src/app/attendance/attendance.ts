@@ -1,6 +1,8 @@
 import { Component,signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
+
 
 export interface AttendanceRecord {
   empId: number;        
@@ -13,7 +15,7 @@ export interface AttendanceDay {
 
 @Component({
   selector: 'app-attendance',
-  imports: [FormsModule,NgFor],
+  imports: [FormsModule,NgFor,RouterLink],
   templateUrl: './attendance.html',
   styleUrl: './attendance.css'
 })

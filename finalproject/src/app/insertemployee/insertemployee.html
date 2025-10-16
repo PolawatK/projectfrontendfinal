@@ -1,28 +1,67 @@
-<h2>เเบบฟอร์มกรอกข้อมูลพนักงาน</h2>
-<div class="container">
-<form (ngSubmit)="addNewEmployee()">
-    <div class="form-box">
-        <p>Firstname - Lastname</p>
-        <input type="text" [value]="fullname()" 
-        (input)="fullname.set($any($event.target).value)" 
-        placeholder="ชื่อ-นามสกุล" >
-    </div>
-    <div class="form-box">
-        <p>Joindate</p>
-        <input type="date" name="date"  [value]="joindate()" 
-        (input)="joindate.set($any($event.target).value)">
-    </div>
-    <div class="form-box">
-        <p>Position</p>
-        <input type="text" name="position" [value]="position()" 
-        (input)="position.set($any($event.target).value)">
-    </div>
-    <div class="form-box">
-        <p>Salary</p>
-        <label for="เงินเดือน"></label>
-        <input type="number" name="salary" step="5000"  [value]="salary()" 
-        (input)="salary.set($any($event.target).value)">
-    </div>
-    <button type="submit" [disabled]="fullname().trim()==''">บันทึก</button>
-</form>
+<div class="body">
+  <div class="head-nav">
+    <nav>
+        <img src="logo.png" alt="">
+      <ul>
+        <li>
+            <a routerLink="/Dashboard">
+              <i class="fa-solid fa-cubes"></i>
+              <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/Employee">
+              <i class="fa-solid fa-users-gear"></i>
+              <span>Employee</span>
+            </a>
+        </li>
+        <li class="active">
+            <a routerLink="/InsertEmployee">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Add Employee</span>
+            </a>
+        </li>
+        <li >
+            <a routerLink="/Attendance">
+              <i class="fa-solid fa-clipboard-user"></i>
+              <span>Attendance</span>
+            </a>
+        </li>
+      </ul>
+      <a href=""><button class="logout-btn">logout</button></a>
+    </nav>   
+  </div>
+  <div class="data">
+      <div class="container">
+        <h2>FORM INSERT EMPLOYEES</h2>
+        <form (ngSubmit)="addNewEmployee()">
+            <div class="form-box">
+                <p>Firstname - Lastname</p>
+                <input type="text" [value]="fullname()" 
+                (input)="fullname.set($any($event.target).value)" 
+                placeholder="fullname" >
+            </div>
+            <div class="form-box">
+                <p>Joindate</p>
+                <input type="date" name="date"  [value]="joindate()" 
+                (input)="joindate.set($any($event.target).value)">
+            </div>
+            <div class="form-box">
+                <p>Position</p>
+                <input type="text" name="position" [value]="position()" 
+                (input)="position.set($any($event.target).value)">
+            </div>
+            <div class="form-box">
+                <p>Salary</p>
+                <label for="เงินเดือน"></label>
+                <input type="number" name="salary" step="5000"  [value]="salary()" 
+                (input)="salary.set($any($event.target).value)">
+            </div>
+            <button type="submit" class="sub-btn" [disabled]="fullname().trim()==''">Save</button>
+        </form>
+        </div>
 </div>
+
+
+
+

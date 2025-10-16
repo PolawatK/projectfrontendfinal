@@ -1,6 +1,7 @@
 <div class="body">
   <div class="head-nav">
     <nav>
+        <img src="logo.png" alt="">
       <ul>
         <li>
             <a routerLink="/Dashboard">
@@ -10,12 +11,25 @@
         </li>
         <li class="active">
             <a routerLink="/Employee">
-              <i class="fa-solid fa-cubes"></i>
+              <i class="fa-solid fa-users-gear"></i>
               <span>Employee</span>
             </a>
         </li>
+        <li>
+            <a routerLink="/InsertEmployee">
+              <i class="fa-solid fa-user-plus"></i>
+              <span>Add Employee</span>
+            </a>
+        </li>
+        <li >
+            <a routerLink="/Attendance">
+              <i class="fa-solid fa-clipboard-user"></i>
+              <span>Attendance</span>
+            </a>
+        </li>
       </ul>
-    </nav>  
+      <a href=""><button class="logout-btn">logout</button></a>
+    </nav> 
   </div>
   <div class="data">
     <div class="data-table">

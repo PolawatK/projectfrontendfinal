@@ -1,0 +1,122 @@
+.body{
+    display: flex;
+}
+nav ul{
+    list-style: none;
+}
+nav ul a{
+    text-decoration: none;
+    color: black;
+}
+nav ul li{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 8px;
+}
+nav ul li a i{
+    margin-right: 5px;
+    color: black;
+}
+.head-nav{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgba(188, 188, 188, 0.589);
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+}
+.data{
+    background-color: #dedcdcc3;
+    padding: 30px;
+    width: 100%;
+}
+nav li.active{
+    background-color: black;
+    
+}
+nav li.active i {
+  color: #fff !important;
+}
+nav li.active span {
+  color: #fff !important;
+}
+.graph{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(188, 188, 188, 0.589);
+}
+nav li{
+    transition: 0.2s;
+}
+nav li:hover{
+    background-color: rgba(86, 86, 86, 0.525);
+}
+nav li:hover span{
+    color: #fff;
+}
+nav li:hover i{
+    color: #fff !important;
+}
+.data{
+    align-items: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+select{
+    padding: 10px;
+}
+nav img{
+    height: 200px;
+    margin-bottom: -20px;
+}
+.container{
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid rgba(188, 188, 188, 0.589);
+}
+form{
+    width: 100%;
+}
+.form-box {
+    padding-top: 20px;
+    width: 100%;
+}
+.form-box input{
+    width: 100%;
+    padding: 10px;
+}
+.sub-btn{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    border: 2px solid black;
+    color: #fff;
+    transition: 0.5s;
+}
+.sub-btn:disabled{
+    background-color: #89898953;
+    border: 2px solid #89898953;
+}
+.sub-btn:hover{
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+}
+.logout-btn{
+    margin-top: 400px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    transition: 0.5s;
+}
+.logout-btn:hover{
+    background-color: rgb(129, 129, 129);
+    color: #fff;
+}

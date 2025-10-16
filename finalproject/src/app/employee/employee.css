@@ -22,7 +22,7 @@ nav ul li a i{
     background-color: rgb(255, 255, 255);
     border: 2px solid rgba(188, 188, 188, 0.589);
     padding: 20px;
-    width: 400px;
+    width: 250px;
     height: 100vh;
 }
 .data{
@@ -55,8 +55,8 @@ table tr{
     transition: 0.2s;
 }
 tbody tr:hover {
-    color: #fff;
-    background-color: rgb(47, 47, 47) !important; 
+    color: #ffffff;
+    background-color: rgba(175, 175, 175, 0.477) !important; 
 }
 table tr:hover td{
     transform: translateY(-2px);
@@ -91,4 +91,21 @@ table tr:nth-child(even) {
 }
 .data-table button:hover i{
     transform: rotateZ(90deg);
+}
+nav img{
+    height: 200px;
+    margin-bottom: -20px;
+}
+.logout-btn{
+    margin-top: 400px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px;
+    transition: 0.5s;
+}
+.logout-btn:hover{
+    background-color: rgb(129, 129, 129);
+    color: #fff;
 }
